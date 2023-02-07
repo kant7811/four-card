@@ -1,0 +1,221 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+html, body{
+    max-height: 100%;
+}  
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  padding: 1rem;
+}
+
+.card__container {
+  display: grid;
+  grid-template-columns: 4;
+  column-gap: 3rem;       
+}
+
+.title__one{
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
+  display: grid;
+  text-align: center;
+  
+  
+}
+
+.title__two{
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+  display: grid;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+
+.title__description{
+  display: grid;
+  text-align: center;
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 4rem;
+}
+
+
+
+.card__one{
+  display: grid;
+  text-align: left;
+  border-top: solid hsl(180, 62%, 55%) 5px;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 100% );
+  box-shadow: 0 1rem 2rem .5rem hsl(0, 0%, 90%);
+  margin-bottom: 1rem;
+}
+
+.card__two{
+  display: grid;
+  text-align: left;
+  border-top: solid hsl(0, 78%, 62%) 5px;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 100% );
+  box-shadow: 0 1rem 2rem .5rem hsl(0, 0%, 90%);
+  margin-bottom: 1rem;
+}
+
+.card__three{
+  display: grid;
+  text-align: left;
+  border-top: solid hsl(34, 97%, 64%) 5px;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 100% );
+  box-shadow: 0 1rem 2rem .5rem hsl(0, 0%, 90%);
+  margin-bottom: 1rem;
+}
+
+.card__four{
+  display: grid;
+  text-align: left;
+  border-top: solid hsl(212, 86%, 64%) 5px;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 100% );
+  box-shadow: 0 1rem 2rem .5rem hsl(0, 0%, 90%);
+  margin-bottom: 1rem;
+}
+
+.card__one__s,
+.card__two__s,
+.card__three__s,
+.card__four__s{
+  color: hsl(234, 12%, 34%);
+  font-weight: 600;
+  padding: 1rem 0rem 0.5rem 1rem;
+  
+}
+
+.card__one__p,
+.card__two__p,
+.card__three__p,
+.card__four__p{
+  color: hsl(229, 6%, 66%);
+  font-weight: 400;
+  font-size: 0.875rem;
+  padding: 0rem 3.5rem 2rem 1rem;
+  
+}
+
+.super{
+  display: grid;
+  justify-items: right;
+  padding: 1.5rem;
+}
+.team{
+  display: grid;
+  justify-items: right;
+  padding: 1.5rem;
+}
+.karma{
+  display: grid;
+  justify-items: right;
+  padding: 1.5rem;
+}
+.calc{
+  display: grid;
+  justify-items: right;
+  padding: 1.5rem;
+}
+
+  
+  @media (min-width: 600px){
+  .card__container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: 
+      "start mid1 end"
+      "start mid2 end";   
+      gap: 1rem;    
+  }
+
+  .card__one  {
+      grid-area: start;
+      align-self: center;
+  }
+
+  .card__two {
+      grid-area: mid1;
+  }
+  .card__three {
+      grid-area: mid2;
+  }
+  .card__four {
+      grid-area: end;
+      align-self: center;
+  }
+}
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
